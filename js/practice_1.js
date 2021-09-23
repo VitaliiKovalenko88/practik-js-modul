@@ -385,3 +385,223 @@
 // console.log(list([{ name: "Bart" }, { name: "Lisa" }])); // returns 'Bart & Lisa'
 // console.log(list([{ name: "Bart" }])); // returns 'Bart'
 // console.log(list([])); // ''
+
+// 28
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+//29
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// console.log(defaultSettings);
+// console.log(overrideSettings);
+// console.log(finalSettings);
+
+//30
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   return {
+//     completed,
+//     category,
+//     priority,
+//     ...data,
+//   };
+
+//   // Change code above this line
+// }
+
+// console.log(makeTask({}));
+// console.log(
+//   makeTask({
+//     category: "Homemade",
+//     priority: "Low",
+//     text: "Take out the trash",
+//   })
+// );
+// console.log(makeTask({ category: "Finance", text: "Take interest" }));
+// console.log(makeTask({ priority: "Low", text: "Choose shampoo" }));
+// console.log(makeTask({ text: "Buy bread" }));
+
+//31
+// Change code below this line
+// function add(...args) {
+//   let sum = 0;
+//   for (const arg of args) {
+//     sum += arg;
+//   }
+//   console.log(sum);
+//   // Change code above this line
+// }
+
+// add(15, 27);
+// add(12, 4, 11, 48);
+// add(32, 6, 13, 19, 8);
+// add(74, 11, 62, 46, 12, 36);
+
+//32
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (firstNumber < arg) {
+//       total += arg;
+//     }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+
+//33
+// function findMatches(firstNumbers, ...args) {
+//   const matches = []; // Don't change this line
+
+//   for (const number of args) {
+//     if (firstNumbers.includes(number)) {
+//       matches.push(number);
+//     }
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log();
+// console.log();
+
+//34
+// const bookShelf = {
+//   // Change code below this line
+//   books: ["The last kingdom", "The guardian of dreams"],
+//   getBooks() {
+//     return "Returning all books";
+//   },
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return console.log(`Deleting book ${bookName}`);
+//   },
+//   updateBook(oldName, newName) {
+//     return `Updating book ${oldName} to ${newName}`;
+//   },
+//   // Change code above this line
+// };
+
+// bookShelf.getBooks();
+// bookShelf.removeBook("Red sunset");
+// console.log(bookShelf.updateBook("Sands of dune", "Dune"));
+
+//35
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const index = this.books.indexOf(oldName);
+//     const splice = this.books.splice(index, 1, newName);
+//     return splice;
+//     // Change code above this line
+//   },
+// };
+
+// bookShelf.updateBook("Haze", "Dungeon chronicles");
+
+//39
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     const index = this.potions.indexOf(potionName);
+//     this.potions.splice(index, 1);
+//     return;
+//     // Change code above this line
+//   },
+// };
+
+//41
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);
+
+//     // console.log(potion.name === newPotion.name);
+//   },
+//   removePotion(potionName) {
+//     const { potions } = this;
+//     for (let i = 0; i < potions.length; i += 1) {
+//       const { name } = potions[i];
+
+//       if (potionName === name) {
+//         return potions.splice(i, 1);
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     const { potions } = this;
+//     for (let i = 0; i < potions.length; i += 1) {
+//       let { name } = potions[i];
+
+//       if (oldName === name) {
+//         return (potions[i].name = newName);
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
+
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// // atTheOldToad.removePotion("Dragon breath");
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
