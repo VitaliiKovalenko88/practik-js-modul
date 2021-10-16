@@ -239,4 +239,95 @@ const users = [
 // getUserWithEmail(users, "shereeanthony@kog.com");
 // console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
 
-//31
+//33
+// const isAnyUserActive = (users) => users.some(({ isActive }) => isActive);
+// console.log(isAnyUserActive(users));
+
+//35
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((acam, player) => {
+//   return acam + player.playtime / player.gamesPlayed;
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+// const calculateTotalBalance = (users) => {
+//   return users.reduce((acam, user) => acam + user.balance, 0);
+// };
+// console.log(calculateTotalBalance(users));
+
+//41
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((a, b) =>
+//   a.author.localeCompare(b.author)
+// );
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) =>
+//   b.author.localeCompare(a.author)
+// );
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+
+// console.table(sortedByAuthorName);
+// console.table(sortedByReversedAuthorName);
+// console.table(sortedByAscendingRating);
+// console.table(sortedByDescentingRating);
+
+//42
+// const sortByAscendingBalance = (users) =>
+//   [...users].sort((a, b) => a.balance - b.balance);
+
+// sortByAscendingBalance(users);
+// console.table(sortByAscendingBalance(users));
+
+//43
+// const sortByDescendingFriendCount = (users) =>
+//   [...users].sort((a, b) => a.friends.loca);
+
+// console.table(sortByDescendingFriendCount(users));
+
+//47
+// const getSortedFriends = (users) => {
+//   return users
+//     .flatMap((user) => user.friends)
+//     .filter((friend, index, array) => array.indexOf(friend) === index)
+//     .sort();
+// };
+
+//48
+// const getTotalBalanceByGender = (users, gender) => {
+//   return users
+//     .filter((user) => user.gender === gender)
+//     .reduce((acc, user) => {
+//       return acc + user.balance;
+//     }, 0);
+// };
+
+// console.table(getTotalBalanceByGender(users, "female"));
