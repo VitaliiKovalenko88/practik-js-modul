@@ -1,0 +1,20 @@
+{
+  "name": "practik-js-modul",
+  "version": "1.0.0",
+  "description": "",
+  "main": "leson_mentor_4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitaliiKovalenko88/practik-js-modul.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitaliiKovalenko88/practik-js-modul/issues"
+  },
+  "homepage": "https://github.com/VitaliiKovalenko88/practik-js-modul#readme"
+}
